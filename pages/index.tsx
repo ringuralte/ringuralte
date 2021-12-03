@@ -160,7 +160,7 @@ const Home: NextPage = () => {
               <div className="flex py-4 gap-x-4 px-12">
                 <p className="flex gap-x-2 items-center text-base">
                   <FontAwesomeIcon icon={faGamepad} />
-                  <span>Video Games</span>
+                  <span>Gaming</span>
                 </p>
                 <p className="flex gap-x-2 items-center text-base">
                   <FontAwesomeIcon icon={faLinux} />
