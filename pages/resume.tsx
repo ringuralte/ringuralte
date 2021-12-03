@@ -4,12 +4,12 @@ import {
   faPhoneAlt,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Resume = () => {
   return (
     <div className="max-w-screen-lg w-full mx-auto">
-      <div className="py-12 grid grid-cols-2">
+      <div className="py-12 grid grid-cols-2 bg-indianRed text-white">
         <div className="flex flex-col col-span-1">
           <h1 className="text-4xl px-12">Lalringzuala</h1>
           <h2 className="text-lg px-12">Software Developer</h2>
@@ -36,6 +36,40 @@ const Resume = () => {
             <FontAwesomeIcon icon={faGithub} />
             <span>github.com/ringuralte</span>
           </p>
+        </div>
+      </div>
+
+      <div className="py-12 grid grid-cols-2">
+        <div className="col-span-1 flex flex-col">
+          <h2 className="text-4xl px-12">Work Experience</h2>
+
+          <div className="text-lg px-12 mt-8">Frontend Developer</div>
+          <div className="text-lg px-12">Makkati</div>
+          <div className="text-sm px-12 italic">07/2020 - Present</div>
+          <ul className="px-12 mt-4 gap-y-4 flex flex-col">
+            <li>
+              Using nextjs and react, succesfully implemented the frontend
+              website for newspaper company Vanglaini at www.vanglaini.org
+            </li>
+            <li>
+              Created frontend for an Archival System used by the Synod Council
+              at Mizoram using nuxtjs and vue.
+            </li>
+          </ul>
+
+          <div className="text-lg px-12 mt-8">Freelance Work</div>
+          <ul className="px-12 mt-4 gap-y-4 flex flex-col">
+            <li>
+              Developed website for architech firm lbassociates at
+              lbassociates.in using nextjs on the frontend and prismic.io as a
+              headless backend/cms and hosted on netlify.
+            </li>
+            <li>
+              Website for Nursing College BNCollege of Nursing at
+              bncollegeofnursingmizoram.com using nextjs and netlifycms as the
+              cms, hosted on netlify.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
