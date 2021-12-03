@@ -45,11 +45,20 @@ const Resume = () => {
         <div className="flex flex-col col-span-1 items-left ml-auto">
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>ringuralte@protonmail.com</span>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="mailto:ringuralte@protonmail.com"
+            >
+              ringuralte@protonmail.com
+            </a>
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faPhoneAlt} />
-            <span>(+91) 9650657715</span>
+            <a className="hover:underline" href="tel: +919650657715">
+              (+91) 9650657715
+            </a>
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faMapMarkerAlt} />
@@ -57,7 +66,14 @@ const Resume = () => {
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faGithub} />
-            <span>github.com/ringuralte</span>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.github.com/ringuralte"
+            >
+              github.com/ringuralte
+            </a>
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faGlobe} />
@@ -68,7 +84,7 @@ const Resume = () => {
 
       <div className="my-12 grid grid-cols-2">
         {/* COLUMN ONE */}
-        <div className="col-span-2 flex flex-col">
+        <div className="col-span-1 flex flex-col">
           <h2 className="text-4xl px-12 text-crimson font-semibold">
             <span className="border-b-4 border-black">Work Experience</span>
           </h2>
@@ -76,30 +92,28 @@ const Resume = () => {
           <div className="text-2xl px-12 mt-8 font-semibold">
             Frontend Developer
           </div>
-          <div className="text-xl px-12">Makkati</div>
-          <div className="text-sm px-12 italic">07/2020 - Present</div>
+          <div className="text-xl px-12">
+            <span className="text-sm">for</span> Makkati 
+            <span className="text-sm px-4 italic">07/2020 - Present</span>
+          </div>
           <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
-            <li>
+            {/* <li>
               Work as Frontend developer for different projects producing
               stunning visual elements of various web applications by
               translating UI/UX designs into code that meet design goals
-            </li>
-            <li>Documenting code written in php and laravel framework</li>
-            <li>
-              Create websites using multiple frontend frameworks such as
-              Nextjs/React and Nuxtjs/Vue
-            </li>
+            </li> */}
+            {/* <li>Documenting code written in php and laravel framework</li> */}
             <li>
               Succesfully implemented the frontend for newspaper company
-              Vanglaini at www.vanglaini.org
+              Vanglaini at www.vanglaini.org using React and Nextjs framework
             </li>
             <li>
               Created frontend for an Archival System used by the Synod Council,
-              Mizoram
+              Mizoram using Vue and Nuxt
             </li>
           </ul>
 
-          <div className="text-lg px-12 mt-8 font-semibold">Freelance Work</div>
+          <div className="text-2xl px-12 mt-8 font-semibold">Freelance Work</div>
           <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
             <li>
               Developed website for architect firm lbassociates at
@@ -115,38 +129,42 @@ const Resume = () => {
         </div>
 
         {/* COLUMN TWO */}
-        <div className="col-span-2 flex flex-col mt-8">
+        <div className="col-span-1 flex flex-col justify-between">
           {/* SKILLS */}
-          <h2 className="text-4xl px-12 text-crimson font-semibold">
-            <span className="border-b-4 border-black">Skills</span>
-          </h2>
-          <div className="flex flex-wrap px-12 gap-x-2 gap-y-2 mt-8">
-            {skills.map((item, i) => {
-              return <Skill key={i} skill={item} />;
-            })}
+          <div>
+            <h2 className="text-4xl px-12 text-crimson font-semibold">
+              <span className="border-b-4 border-black">Skills</span>
+            </h2>
+            <div className="flex flex-wrap px-12 gap-x-2 gap-y-2 mt-8">
+              {skills.map((item, i) => {
+                return <Skill key={i} skill={item} />;
+              })}
+            </div>
           </div>
 
           {/* INTERESTS */}
-          <h2 className="text-2xl px-12 text-crimson font-semibold mt-8">
-            <span className="border-b-4 border-black">Interests</span>
-          </h2>
-          <div className="flex py-4 gap-x-4 px-12">
-            <p className="flex gap-x-2 items-center text-base">
-              <FontAwesomeIcon icon={faGamepad} />
-              <span>Video Games</span>
-            </p>
-            <p className="flex gap-x-2 items-center text-base">
-              <FontAwesomeIcon icon={faLinux} />
-              <span>Linux</span>
-            </p>
-            <p className="flex gap-x-2 items-center text-base">
-              <FontAwesomeIcon icon={faBook} />
-              <span>Reading</span>
-            </p>
-            <p className="flex gap-x-2 items-center text-base">
-              <FontAwesomeIcon icon={faFilm} />
-              <span>Movies</span>
-            </p>
+          <div>
+            <h2 className="text-4xl px-12 text-crimson font-semibold mt-8">
+              <span className="border-b-4 border-black">Interests</span>
+            </h2>
+            <div className="flex py-4 gap-x-4 px-12">
+              <p className="flex gap-x-2 items-center text-base">
+                <FontAwesomeIcon icon={faGamepad} />
+                <span>Video Games</span>
+              </p>
+              <p className="flex gap-x-2 items-center text-base">
+                <FontAwesomeIcon icon={faLinux} />
+                <span>Linux</span>
+              </p>
+              <p className="flex gap-x-2 items-center text-base">
+                <FontAwesomeIcon icon={faBook} />
+                <span>Reading</span>
+              </p>
+              <p className="flex gap-x-2 items-center text-base">
+                <FontAwesomeIcon icon={faFilm} />
+                <span>Movies</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
