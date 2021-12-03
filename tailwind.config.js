@@ -1,11 +1,16 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        indianRed: "#cd6161",
+				crimson: "#c61436"
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
