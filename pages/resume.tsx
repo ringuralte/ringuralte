@@ -35,9 +35,11 @@ const Resume = () => {
     <div className="max-w-screen-lg w-full mx-auto">
       <div className="py-12 grid grid-cols-2 bg-crimson text-white">
         <div className="flex flex-col col-span-1">
-          <h1 className="text-4xl px-12">Lalringzuala</h1>
-          <h2 className="text-lg px-12">Software Developer</h2>
-          <p className="px-12 pt-6">
+          <h1 className="text-4xl px-12 font-title font-semibold ">
+            Lalringzuala
+          </h1>
+          <h2 className="text-lg px-12 ">Software Developer</h2>
+          <p className="px-12 pt-6 ">
             Software developer with 2 years experience in Frontend developement.
             Successfully created websites for a number of services and firms.
           </p>
@@ -62,7 +64,14 @@ const Resume = () => {
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <span>Lengpui, Mizoram</span>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://goo.gl/maps/swWN7RGwoZW7U51Y7"
+            >
+              Lengpui, Mizoram
+            </a>
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faGithub} />
@@ -77,7 +86,14 @@ const Resume = () => {
           </p>
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faGlobe} />
-            <span>www.ringuralte.dev</span>
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://ringuralte.dev/"
+            >
+              ringuralte.dev
+            </a>
           </p>
         </div>
       </div>
@@ -85,15 +101,15 @@ const Resume = () => {
       <div className="my-12 grid grid-cols-2">
         {/* COLUMN ONE */}
         <div className="col-span-1 flex flex-col">
-          <h2 className="text-4xl px-12 text-crimson font-semibold">
+          <h2 className="text-4xl px-12 text-crimson font-bold font-title">
             <span className="border-b-4 border-black">Work Experience</span>
           </h2>
 
-          <div className="text-2xl px-12 mt-8 font-semibold">
+          <div className="text-2xl px-12 mt-8 font-semibold font-title">
             Frontend Developer
           </div>
           <div className="text-xl px-12">
-            <span className="text-sm">for</span> Makkati 
+            <span className="text-sm">for</span> Makkati
             <span className="text-sm px-4 italic">07/2020 - Present</span>
           </div>
           <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
@@ -102,7 +118,7 @@ const Resume = () => {
               stunning visual elements of various web applications by
               translating UI/UX designs into code that meet design goals
             </li> */}
-            {/* <li>Documenting code written in php and laravel framework</li> */}
+            <li>Documenting code written in php and laravel framework</li>
             <li>
               Succesfully implemented the frontend for newspaper company
               Vanglaini at www.vanglaini.org using React and Nextjs framework
@@ -113,7 +129,9 @@ const Resume = () => {
             </li>
           </ul>
 
-          <div className="text-2xl px-12 mt-8 font-semibold">Freelance Work</div>
+          <div className="text-2xl px-12 mt-8 font-semibold font-title">
+            Freelance Work
+          </div>
           <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
             <li>
               Developed website for architect firm lbassociates at
@@ -132,7 +150,7 @@ const Resume = () => {
         <div className="col-span-1 flex flex-col justify-between">
           {/* SKILLS */}
           <div>
-            <h2 className="text-4xl px-12 text-crimson font-semibold">
+            <h2 className="text-4xl px-12 text-crimson font-semibold font-title">
               <span className="border-b-4 border-black">Skills</span>
             </h2>
             <div className="flex flex-wrap px-12 gap-x-2 gap-y-2 mt-8">
@@ -144,13 +162,13 @@ const Resume = () => {
 
           {/* INTERESTS */}
           <div>
-            <h2 className="text-4xl px-12 text-crimson font-semibold mt-8">
+            <h2 className="text-4xl px-12 text-crimson font-semibold mt-8 font-title">
               <span className="border-b-4 border-black">Interests</span>
             </h2>
             <div className="flex py-4 gap-x-4 px-12">
               <p className="flex gap-x-2 items-center text-base">
                 <FontAwesomeIcon icon={faGamepad} />
-                <span>Video Games</span>
+                <span>Gaming</span>
               </p>
               <p className="flex gap-x-2 items-center text-base">
                 <FontAwesomeIcon icon={faLinux} />
