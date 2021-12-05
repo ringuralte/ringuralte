@@ -22,7 +22,7 @@ const skills = [
   "redux",
   "tailwindcss",
   "git",
-  "googling questions",
+  /* "googling questions", */
   "netlify-cms",
   "prismic.io",
   "headless servers",
@@ -30,21 +30,22 @@ const skills = [
   "python",
 ];
 
+
 const Resume = () => {
   return (
-    <div className="max-w-screen-lg w-full mx-auto">
-      <div className="py-12 grid grid-cols-2 bg-crimson text-white">
+    <div className="mx-auto w-full max-w-screen-lg">
+      <div className="grid grid-cols-2 py-12 text-white bg-crimson">
         <div className="flex flex-col col-span-1">
-          <h1 className="text-4xl px-12 font-title font-semibold ">
+          <h1 className="px-12 text-4xl font-semibold font-title">
             Lalringzuala
           </h1>
-          <h2 className="text-lg px-12 ">Software Developer</h2>
-          <p className="px-12 pt-6 ">
+          <h2 className="px-12 text-lg">Software Developer</h2>
+          <p className="px-12 pt-6">
             Software developer with 2 years experience in Frontend developement.
             Successfully created websites for a number of services and firms.
           </p>
         </div>
-        <div className="flex flex-col col-span-1 items-left ml-auto">
+        <div className="flex flex-col col-span-1 ml-auto items-left">
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faEnvelope} />
             <a
@@ -79,7 +80,7 @@ const Resume = () => {
               className="hover:underline"
               target="_blank"
               rel="noreferrer noopener"
-              href="https://www.github.com/ringuralte"
+              href="https://github.com/ringuralte"
             >
               github.com/ringuralte
             </a>
@@ -98,21 +99,21 @@ const Resume = () => {
         </div>
       </div>
 
-      <div className="my-12 grid grid-cols-2">
+      <div className="grid grid-cols-2 my-12">
         {/* COLUMN ONE */}
-        <div className="col-span-1 flex flex-col">
-          <h2 className="text-4xl px-12 text-crimson font-bold font-title">
+        <div className="flex flex-col col-span-1">
+          <h2 className="px-12 text-4xl font-bold text-crimson font-title">
             <span className="border-b-4 border-black">Work Experience</span>
           </h2>
 
-          <div className="text-2xl px-12 mt-8 font-semibold font-title">
+          <div className="px-12 mt-8 text-2xl font-semibold font-title">
             Frontend Developer
           </div>
-          <div className="text-xl px-12">
+          <div className="px-12 text-xl">
             <span className="text-sm">for</span> Makkati
-            <span className="text-sm px-4 italic">07/2020 - Present</span>
+            <span className="px-4 text-sm italic">07/2020 - Present</span>
           </div>
-          <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
+          <ul className="flex flex-col gap-y-4 px-16 mt-4 list-disc">
             {/* <li>
               Work as Frontend developer for different projects producing
               stunning visual elements of various web applications by
@@ -121,7 +122,16 @@ const Resume = () => {
             <li>Documenting code written in php and laravel framework</li>
             <li>
               Succesfully implemented the frontend for newspaper company
-              Vanglaini at www.vanglaini.org using React and Nextjs framework
+              Vanglaini at{" "}
+              <a
+                className="hover:underline"
+                target="_blank"
+                href="https://vanglaini.org"
+                rel="noreferrer noopener"
+              >
+                vanglaini.org
+              </a>{" "}
+              using React and Nextjs framework
             </li>
             <li>
               Created frontend for an Archival System used by the Synod Council,
@@ -129,31 +139,46 @@ const Resume = () => {
             </li>
           </ul>
 
-          <div className="text-2xl px-12 mt-8 font-semibold font-title">
+          <div className="px-12 mt-8 text-2xl font-semibold font-title">
             Freelance Work
           </div>
-          <ul className="px-16 mt-4 gap-y-4 flex flex-col list-disc">
+          <ul className="flex flex-col gap-y-4 px-16 mt-4 list-disc">
             <li>
-              Developed website for architect firm lbassociates at
-              lbassociates.in using nextjs on the frontend and prismic.io as a
-              headless backend/cms and hosted on netlify.
+              Developed website for architect firm lbassociates at{" "}
+              <a
+                className="hover:underline"
+                target="_blank"
+                href="https://lbassociates.in"
+                rel="noreferrer noopener"
+              >
+                lbassociates.in
+              </a>{" "}
+              using nextjs on the frontend and prismic.io as a headless
+              backend/cms and hosted on netlify.
             </li>
             <li>
-              Website for Nursing College BNCollege of Nursing at
-              bncollegeofnursingmizoram.com using nextjs and netlifycms as the
-              cms, hosted on netlify.
+              Website for Nursing College BNCollege of Nursing at{" "}
+              <a
+                className="hover:underline"
+                target="_blank"
+                href="https://bncollegeofnursingmizoram.com"
+                rel="noreferrer noopener"
+              >
+                bncollegeofnursingmizoram.com
+              </a>{" "}
+              using nextjs and netlifycms as the cms, hosted on netlify.
             </li>
           </ul>
         </div>
 
         {/* COLUMN TWO */}
-        <div className="col-span-1 flex flex-col justify-between">
+        <div className="flex flex-col col-span-1 justify-between">
           {/* SKILLS */}
           <div>
-            <h2 className="text-4xl px-12 text-crimson font-semibold font-title">
+            <h2 className="px-12 text-4xl font-semibold text-crimson font-title">
               <span className="border-b-4 border-black">Skills</span>
             </h2>
-            <div className="flex flex-wrap px-12 gap-x-2 gap-y-2 mt-8">
+            <div className="flex flex-wrap gap-x-2 gap-y-2 px-12 mt-8">
               {skills.map((item, i) => {
                 return <Skill key={i} skill={item} />;
               })}
@@ -162,10 +187,10 @@ const Resume = () => {
 
           {/* INTERESTS */}
           <div>
-            <h2 className="text-4xl px-12 text-crimson font-semibold mt-8 font-title">
+            <h2 className="px-12 mt-8 text-4xl font-semibold text-crimson font-title">
               <span className="border-b-4 border-black">Interests</span>
             </h2>
-            <div className="flex py-4 gap-x-4 px-12">
+            <div className="flex flex-wrap gap-x-4 py-4 px-12 w-3/4">
               <p className="flex gap-x-2 items-center text-base">
                 <FontAwesomeIcon icon={faGamepad} />
                 <span>Gaming</span>
