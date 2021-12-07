@@ -34,7 +34,7 @@ const skills = [
 const Resume = () => {
   return (
     <div className="mx-auto w-full max-w-screen-lg">
-      <div className="grid grid-cols-2 py-12 text-white bg-crimson">
+      <div className="grid grid-cols-1 gap-y-12 md:gap-y-0 md:grid-cols-2 py-12 text-white bg-crimson">
         <div className="flex flex-col col-span-1">
           <h1 className="px-12 text-4xl font-semibold font-title">
             Lalringzuala
@@ -45,7 +45,7 @@ const Resume = () => {
             Successfully created websites for a number of services and firms.
           </p>
         </div>
-        <div className="flex flex-col col-span-1 ml-auto items-left">
+        <div className="flex flex-col col-span-1 md:ml-auto md:items-left">
           <p className="flex gap-x-2 items-center px-12">
             <FontAwesomeIcon icon={faEnvelope} />
             <a
@@ -99,7 +99,7 @@ const Resume = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 my-12">
+      <div className="grid grid-cols-1 gap-y-12 md:gap-y-0 md:grid-cols-2 my-12">
         {/* COLUMN ONE */}
         <div className="flex flex-col col-span-1">
           <h2 className="px-12 text-4xl font-bold text-crimson font-title">
@@ -114,11 +114,6 @@ const Resume = () => {
             <span className="px-4 text-sm italic">07/2020 - Present</span>
           </div>
           <ul className="flex flex-col gap-y-4 px-16 mt-4 list-disc">
-            {/* <li>
-              Work as Frontend developer for different projects producing
-              stunning visual elements of various web applications by
-              translating UI/UX designs into code that meet design goals
-            </li> */}
             <li>Documenting code written in php and laravel framework</li>
             <li>
               Succesfully implemented the frontend for newspaper company
