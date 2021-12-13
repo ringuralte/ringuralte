@@ -9,7 +9,12 @@ module.exports = {
       },
       fontFamily: {
         title: ["Halant"],
+        iosevka: ["IosevkaEtoile"],
       },
+			minHeight: {
+				'1/5': '20%',
+				'4/5': '80%'
+			}
     },
   },
   variants: {
