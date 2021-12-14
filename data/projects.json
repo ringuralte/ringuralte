@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Vanglaini",
+    "image": "/images/vanglaini.org_.png",
+    "link": "vanglaini.org",
+    "body": "Created the front end website for Vanglaini, a newspapery agency from Mizoram. Using react and nextjs framework along with styling in tailwindcss."
+  },
+  {
+    "title": "Synod Archive",
+    "image": "/images/synod.tukverh.com_.png",
+    "link": "offline app",
+    "body": "Created the front end website for Vanglaini, a newspapery agency from Mizoram. Using react and nextjs framework along with styling in tailwindcss."
+  },
+  {
+    "title": "LBAssociates",
+    "image": "/images/lbassociates.in_.png",
+    "link": "lbassociates.in",
+    "body": "Created the front end website for Vanglaini, a newspapery agency from Mizoram. Using react and nextjs framework along with styling in tailwindcss."
+  },
+  {
+    "title": "BNCollege of Nursing",
+    "image": "/images/bncollege.png",
+    "link": "bncollegeofnursingmizoram.com",
+    "body": "Created the front end website for Vanglaini, a newspapery agency from Mizoram. Using react and nextjs framework along with styling in tailwindcss."
+  }
+]

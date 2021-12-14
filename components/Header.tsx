@@ -7,11 +7,7 @@ export const Header: React.FC = () => {
   const [isDelete, setIsDelete] = useState<boolean>(false);
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [isDoing, setIsDoing] = useState<boolean>(false);
-h
-  // Initial hold for 3 secs
-	/* useEffect(() => {
-		setIsDoing(true);
-  * }, []); */
+
 	useEffect(() => {
 		setTimeout(() => {
 			setIsDoing(true);
