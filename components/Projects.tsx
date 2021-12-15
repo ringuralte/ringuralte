@@ -56,11 +56,11 @@ export const Projects: React.FC = () => {
     <div className="flex flex-col items-center pt-24 h-full font-iosevka">
       <div className="flex relative justify-center w-full">
         <TitleBox title="Projects" />
-        <div className="absolute right-0">
+        <div className="absolute right-0 mr-1 md:mr-0">
           <button
             type="button"
             className={classNames(
-              "border-2 p-4 relative",
+              "border-2 p-2 md:p-4 relative",
               carouselView ? "bg-gray-200" : "bg-none"
             )}
             onClick={setCarouselTrue}
@@ -70,7 +70,7 @@ export const Projects: React.FC = () => {
             <FontAwesomeIcon icon={faEllipsisH} />
             <div
               className={classNames(
-                "absolute top-16 left-0 rounded-br-lg bg-black text-white text-sm font-iosevka p-1 transition-all transform duration-200 origin-top",
+                "absolute top-12 md:top-16 left-0 rounded-br-lg bg-black text-white text-sm font-iosevka p-1 transition-all transform duration-200 origin-top",
                 popOver.carousel ? "scale-y-100" : "scale-y-0"
               )}
             >
@@ -80,7 +80,7 @@ export const Projects: React.FC = () => {
           <button
             type="button"
             className={classNames(
-              "border-2 p-4 relative",
+              "border-2 p-2 md:p-4 relative",
               carouselView ? "bg-none" : "bg-gray-200"
             )}
             onClick={setCarouselFalse}
@@ -90,7 +90,7 @@ export const Projects: React.FC = () => {
             <FontAwesomeIcon icon={faStream} />
             <div
               className={classNames(
-                "absolute top-16 left-0 rounded-br-lg bg-black text-white text-sm font-iosevka p-1 transition-all transform duration-200 origin-top",
+                "absolute top-12 md:top-16 left-0 rounded-br-lg bg-black text-white text-sm font-iosevka p-1 transition-all transform duration-200 origin-top",
                 popOver.list ? "scale-y-100" : "scale-y-0"
               )}
             >

@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <AboutMe />
         </div>
       </div>
-      <div className="flex flex-col mx-auto w-full max-w-screen-lg min-h-screen ">
+      <div className="flex flex-col mx-auto w-full max-w-screen-lg ">
         <Projects />
       </div>
     </div>

@@ -5,14 +5,14 @@ import { TitleBox } from "./TitleBox";
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className="flex flex-col items-center h-full pt-24 font-iosevka">
-			  <TitleBox title="About Me" />
-      <p className="pt-24 text-2xl">
+    <div className="flex flex-col items-center pt-24 h-full font-iosevka">
+      <TitleBox title="About Me" />
+      <p className="text-center px-2 pt-12 text-lg lg:px-0 md:pt-24 md:text-2xl">
         Hi, I'm Lalringzuala, a web developer from Mizoram, India.
       </p>
 
-      <div className="pt-24 flex gap-x-12">
-        <div className="flex gap-x-2 items-center " data-cy="email">
+      <div className="flex flex-col gap-y-1 gap-x-12 pt-12 md:flex-row md:gap-y-0 md:pt-24">
+        <div className="flex gap-x-2 items-center" data-cy="email">
           <FontAwesomeIcon icon={faEnvelope} />
           <a
             className="hover:underline"
