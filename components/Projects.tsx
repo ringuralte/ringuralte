@@ -110,6 +110,7 @@ export const Projects: React.FC = () => {
           return (
             <ProjectCard
               key={key}
+              subtitle={projects[key].subtitle}
               title={projects[key].title}
               image={projects[key].image}
               link={projects[key].link}
@@ -139,6 +140,7 @@ export const Projects: React.FC = () => {
             return (
               <SwiperSlide key={key}>
                 <ProjectCard
+                  subtitle={projects[key].subtitle}
                   title={projects[key].title}
                   image={projects[key].image}
                   link={projects[key].link}
