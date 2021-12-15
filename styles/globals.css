@@ -71,4 +71,17 @@
       color: black;
     }
   }
+
+  .swiper-custom .swiper-button-next {
+    color: black;
+  }
+
+	.swiper-custom .swiper-button-prev {
+		color: black;
+	}
+
+	.swiper-custom .swiper-pagination-bullet-active {
+		color: black;
+		background: black;
+	}
 }

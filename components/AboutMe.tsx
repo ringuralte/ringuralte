@@ -6,7 +6,7 @@ import { TitleBox } from "./TitleBox";
 export const AboutMe: React.FC = () => {
   return (
     <div className="flex flex-col items-center h-full pt-24 font-iosevka">
-      <TitleBox title="About Me" />
+			  <TitleBox title="About Me" />
       <p className="pt-24 text-2xl">
         Hi, I'm Lalringzuala, a web developer from Mizoram, India.
       </p>

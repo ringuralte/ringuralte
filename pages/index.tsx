@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <title>ringuralte</title>
         <meta name="description" content="ringuralte" />
       </Head>
-      <div className="flex flex-col mx-auto w-full max-w-screen-lg h-screen ">
+      <div className="flex flex-col mx-auto w-full max-w-screen-lg min-h-screen h-auto">
         <div className="h-full min-h-1/5">
           <Header />
         </div>
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <AboutMe />
         </div>
       </div>
-      <div className="flex flex-col mx-auto w-full max-w-screen-lg h-screen ">
+      <div className="flex flex-col mx-auto w-full max-w-screen-lg min-h-screen ">
         <Projects />
       </div>
     </div>
