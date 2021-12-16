@@ -7,9 +7,11 @@ export const AboutMe: React.FC = () => {
   return (
     <div className="flex flex-col items-center pt-24 h-full font-iosevka">
       <TitleBox title="About Me" />
-      <p className="text-center px-2 pt-12 text-lg lg:px-0 md:pt-24 md:text-2xl">
-        Hi, I'm Lalringzuala, a web developer from Mizoram, India.
-      </p>
+      <div className="text-left px-2 pt-12 text-lg lg:px-0 md:pt-24 md:text-2xl">
+        <p className="font-bold">Hello,</p>
+        <p className=" font-bold">My name is Lalringzuala,</p>{" "}
+        <p>I am a web developer from Mizoram, India.</p>
+      </div>
 
       <div className="flex flex-col gap-y-1 gap-x-12 pt-12 md:flex-row md:gap-y-0 md:pt-24">
         <div className="flex gap-x-2 items-center" data-cy="email">
@@ -21,12 +23,6 @@ export const AboutMe: React.FC = () => {
             href="mailto:ringuralte@protonmail.com"
           >
             ringuralte@protonmail.com
-          </a>
-        </div>
-        <div className="flex gap-x-2 items-center" data-cy="phone">
-          <FontAwesomeIcon icon={faPhoneAlt} />
-          <a className="hover:underline" href="tel: +919650657715">
-            (+91)9650657715
           </a>
         </div>
         <div className="flex gap-x-2 items-center" data-cy="github">
