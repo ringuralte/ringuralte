@@ -60,7 +60,7 @@ export const Projects: React.FC = () => {
           <button
             type="button"
             className={classNames(
-              "border-2 p-2 md:p-4 relative",
+              "border-2 p-2 md:p-4 relative focus:outline-none",
               carouselView ? "bg-gray-200" : "bg-none"
             )}
             onClick={setCarouselTrue}
@@ -80,7 +80,7 @@ export const Projects: React.FC = () => {
           <button
             type="button"
             className={classNames(
-              "border-2 p-2 md:p-4 relative",
+              "border-2 p-2 md:p-4 relative focus:outline-none",
               carouselView ? "bg-none" : "bg-gray-200"
             )}
             onClick={setCarouselFalse}
@@ -107,14 +107,17 @@ export const Projects: React.FC = () => {
         )}
       >
         {Object.keys(projects).map((key) => {
+          const intKey: number = parseInt(key);
+          const imageOnLeft = intKey % 2 === 0;
           return (
             <ProjectCard
               key={key}
-              subtitle={projects[key].subtitle}
-              title={projects[key].title}
-              image={projects[key].image}
-              link={projects[key].link}
-              body={projects[key].body}
+              imageOnLeft={imageOnLeft}
+              subtitle={projects[intKey].subtitle}
+              title={projects[intKey].title}
+              image={projects[intKey].image}
+              link={projects[intKey].link}
+              body={projects[intKey].body}
             />
           );
         })}
@@ -140,6 +143,7 @@ export const Projects: React.FC = () => {
             return (
               <SwiperSlide key={key}>
                 <ProjectCard
+                  imageOnLeft={true}
                   subtitle={projects[key].subtitle}
                   title={projects[key].title}
                   image={projects[key].image}
