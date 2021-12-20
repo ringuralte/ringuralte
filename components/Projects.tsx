@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState } from "react";
 import { classNames } from "utils/functions";
+import { ComponentContainer } from "./layout/Container";
 
 export const Projects: React.FC = () => {
   const [carouselView, setCarouselView] = useState(true);
@@ -53,7 +54,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pt-24 h-full font-iosevka">
+		<ComponentContainer>
       <div className="flex relative justify-center w-full">
         <TitleBox title="Projects" />
         <div className="absolute right-0 mr-1 md:mr-0">
@@ -155,6 +156,6 @@ export const Projects: React.FC = () => {
           })}
         </Swiper>
       </div>
-    </div>
+		</ComponentContainer>
   );
 };

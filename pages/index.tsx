@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AboutMe } from "../components/AboutMe";
-import { Header } from "../components/Header";
-import { Projects } from "../components/Projects";
+import { AboutMe } from "@/components/AboutMe";
+import { Header } from "@/components/Header";
+import { Projects } from "@/components/Projects";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <AboutMe />
         </div>
       </div>
-      <div className="flex flex-col mx-auto w-full max-w-screen-lg ">
+      <div className="flex flex-col mx-auto w-full max-w-screen-lg min-h-screen ">
         <Projects />
       </div>
     </div>

@@ -2,10 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { TitleBox } from "./TitleBox";
+import { ComponentContainer } from "./layout/Container";
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className="flex flex-col items-center pt-24 h-full font-iosevka">
+    <ComponentContainer>
       <TitleBox title="About Me" />
       <div className="text-left px-2 pt-12 text-lg lg:px-0 md:pt-24 md:text-2xl">
         <p className="font-bold">Hello,</p>
@@ -37,6 +38,6 @@ export const AboutMe: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </ComponentContainer>
   );
 };
