@@ -20,8 +20,6 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
     list: false,
   });
 
-	console.log(projects)
-
   const setCarouselPopup = () => {
     setPopOver({
       carousel: true,
