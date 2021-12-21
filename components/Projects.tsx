@@ -1,6 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
 import { TitleBox } from "./TitleBox";
-import projects from "../data/projects.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { faStream, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
@@ -12,13 +11,16 @@ import "swiper/css/pagination";
 import { useState } from "react";
 import { classNames } from "utils/functions";
 import { ComponentContainer } from "./layout/Container";
+import { Project } from "@/types/Project";
 
-export const Projects: React.FC = () => {
+export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
   const [carouselView, setCarouselView] = useState(false);
   const [popOver, setPopOver] = useState({
     carousel: false,
     list: false,
   });
+
+	console.log(projects)
 
   const setCarouselPopup = () => {
     setPopOver({
@@ -104,7 +106,9 @@ export const Projects: React.FC = () => {
       <div
         className={classNames(
           "transition-all transform duration-100 origin-top",
-          carouselView ? "scale-0 h-0 w-0" : "scale-100 flex flex-col h-full w-full"
+          carouselView
+            ? "scale-0 h-0 w-0"
+            : "scale-100 flex flex-col h-full w-full"
         )}
       >
         {Object.keys(projects).map((key) => {
@@ -119,6 +123,7 @@ export const Projects: React.FC = () => {
               image={projects[intKey].image}
               link={projects[intKey].link}
               body={projects[intKey].body}
+              tools={projects[intKey].tools}
             />
           );
         })}
@@ -131,7 +136,7 @@ export const Projects: React.FC = () => {
         )}
       >
         <Swiper
-					className="h-[600px]"
+          className="h-[600px]"
           modules={[Navigation, Pagination]}
           spaceBetween={50}
           slidesPerView={1}
@@ -148,6 +153,7 @@ export const Projects: React.FC = () => {
                   title={projects[key].title}
                   image={projects[key].image}
                   link={projects[key].link}
+                  tools={projects[key].tools}
                   body={projects[key].body}
                 />
               </SwiperSlide>
