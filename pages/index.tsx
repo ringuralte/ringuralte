@@ -1,4 +1,4 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { AboutMe } from "@/components/AboutMe";
 import { Header } from "@/components/Header";
@@ -7,11 +7,8 @@ import { Footer } from "@/components/Footer";
 import { Project } from "@/types/Project";
 import { server } from "../config";
 import { DownloadResume } from "@/components/DownloadResume";
-import axios from "axios";
 
-const Home: NextPage = ({
-  projects,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
   return (
     <div>
       <Head>
@@ -45,13 +42,19 @@ const Home: NextPage = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await axios.get(`${server}/api/projects`, {
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "User-Agent": "*",
-    },
-  });
-  const projects: Project[] = await res.data;
+  let projects: Project[] = [];
+  try {
+    const res = await fetch(`${server}/api/projects`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent": "*",
+      },
+    });
+    projects = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: { projects },
