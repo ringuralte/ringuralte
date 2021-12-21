@@ -143,16 +143,17 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
           pagination={{ clickable: true }}
         >
           {Object.keys(projects).map((key: string) => {
+            const intKey: number = parseInt(key);
             return (
               <SwiperSlide key={key}>
                 <ProjectCard
                   imageOnLeft={true}
-                  subtitle={projects[key].subtitle}
-                  title={projects[key].title}
-                  image={projects[key].image}
-                  link={projects[key].link}
-                  tools={projects[key].tools}
-                  body={projects[key].body}
+                  subtitle={projects[intKey].subtitle}
+                  title={projects[intKey].title}
+                  image={projects[intKey].image}
+                  link={projects[intKey].link}
+                  tools={projects[intKey].tools}
+                  body={projects[intKey].body}
                 />
               </SwiperSlide>
             );
