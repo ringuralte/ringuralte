@@ -37,10 +37,10 @@ export const Skills: React.FC = () => {
   );
 };
 
-const Skill = (props: Skill): JSX.Element => {
+const Skill: React.FC<{ skill: string }> = ({ skill }) => {
   return (
     <div className="border-2 border-crimson rounded-full hover:bg-crimson hover:text-white cursor-default">
-      <span className="p-4">{props.skill}</span>
+      <span className="p-4">{skill}</span>
     </div>
   );
 };
