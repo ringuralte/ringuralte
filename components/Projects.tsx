@@ -55,7 +55,7 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
 
   return (
     <ComponentContainer>
-      <div className="flex relative justify-center w-full">
+      <div className="flex relative justify-center w-full pb-24">
         <TitleBox title="Projects" />
         <div className="absolute right-0 mr-1 md:mr-0">
           <button
@@ -106,7 +106,7 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
           "transition-all transform duration-100 origin-top",
           carouselView
             ? "scale-0 h-0 w-0"
-            : "scale-100 flex flex-col h-full w-full"
+            : "scale-100 flex flex-col gap-y-24 h-full w-full"
         )}
       >
         {Object.keys(projects).map((key) => {
@@ -134,7 +134,7 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
         )}
       >
         <Swiper
-          className="h-[600px]"
+          className="h-[750px] md:h-[600px]"
           modules={[Navigation, Pagination]}
           spaceBetween={50}
           slidesPerView={1}

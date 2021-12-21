@@ -34,17 +34,18 @@ export const ProjectCard = (props: ProjectCard) => {
           <h3
             className={classNames(
               "text-2xl px-2",
-              props.imageOnLeft ? "text-left" : "text-right"
+              props.imageOnLeft ? "text-left" : "text-left md:text-right"
             )}
           >
             {props.title}
           </h3>
+				  {/* if no link normal h4 tag */}
           {props.link.length ? (
             <a href={props.link} target="_blank" rel="noreferrer noopener">
               <h4
                 className={classNames(
                   "text-sm italic px-2",
-                  props.imageOnLeft ? "text-left" : "text-right"
+                  props.imageOnLeft ? "text-left" : "text-left md:text-right"
                 )}
               >
                 {props.subtitle}
@@ -54,7 +55,7 @@ export const ProjectCard = (props: ProjectCard) => {
             <h4
               className={classNames(
                 "text-sm italic px-2",
-                props.imageOnLeft ? "text-left" : "text-right"
+                props.imageOnLeft ? "text-left" : "text-left md:text-right"
               )}
             >
               {props.subtitle}
@@ -72,7 +73,7 @@ export const ProjectCard = (props: ProjectCard) => {
         <div
           className={classNames(
             "flex gap-x-4 px-2 items-baseline w-full",
-            props.imageOnLeft ? "justify-start" : "justify-end"
+            props.imageOnLeft ? "justify-start" : "justify-start md:justify-end"
           )}
         >
           <div className="border bg-black text-white py-1 px-2">Tools: </div>
