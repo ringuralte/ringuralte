@@ -14,7 +14,7 @@ import { classNames } from "utils/functions";
 import { ComponentContainer } from "./layout/Container";
 
 export const Projects: React.FC = () => {
-  const [carouselView, setCarouselView] = useState(true);
+  const [carouselView, setCarouselView] = useState(false);
   const [popOver, setPopOver] = useState({
     carousel: false,
     list: false,
@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-		<ComponentContainer>
+    <ComponentContainer>
       <div className="flex relative justify-center w-full">
         <TitleBox title="Projects" />
         <div className="absolute right-0 mr-1 md:mr-0">
@@ -103,8 +103,8 @@ export const Projects: React.FC = () => {
 
       <div
         className={classNames(
-          "transition-all transform duration-500 origin-top",
-          carouselView ? "opacity-0 h-0" : "opacity-100 flex flex-col h-full"
+          "transition-all transform duration-100 origin-top",
+          carouselView ? "scale-0 h-0 w-0" : "scale-100 flex flex-col h-full w-full"
         )}
       >
         {Object.keys(projects).map((key) => {
@@ -126,13 +126,12 @@ export const Projects: React.FC = () => {
 
       <div
         className={classNames(
-          "transition-all transform duration-500 origin-top",
-          carouselView
-            ? "opacity-100 flex w-full h-full swiper-custom"
-            : "opacity-0 h-0 w-0"
+          "transition-all transform duration-100 origin-top swiper-custom",
+          carouselView ? "scale-100 flex h-full w-full" : "scale-0 h-0 w-0"
         )}
       >
         <Swiper
+					className="h-[600px]"
           modules={[Navigation, Pagination]}
           spaceBetween={50}
           slidesPerView={1}
@@ -156,6 +155,6 @@ export const Projects: React.FC = () => {
           })}
         </Swiper>
       </div>
-		</ComponentContainer>
+    </ComponentContainer>
   );
 };

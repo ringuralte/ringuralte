@@ -12,7 +12,7 @@ interface Project {
 
 export const ProjectCard = (props: Project) => {
   return (
-    <div className="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 w-full h-full mt-12 md:my-24">
+    <div className="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 w-full h-full pt-12 md:py-24">
       <div
         className={classNames(
           "relative col-span-1 w-full h-72 md:h-96",
@@ -29,7 +29,9 @@ export const ProjectCard = (props: Project) => {
       <div
         className={classNames(
           "flex flex-col col-span-1 w-full items-center h-64 md:h-96",
-          props.imageOnLeft ? "md:order-2 md:items-start" : "md:order-1 md:items-end"
+          props.imageOnLeft
+            ? "md:order-2 md:items-start"
+            : "md:order-1 md:items-end"
         )}
       >
         <h3 className="text-2xl px-2">{props.title}</h3>
