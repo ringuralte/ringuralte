@@ -20,6 +20,7 @@ specifiers:
   eslint-plugin-cypress: ^2.12.1
   identity-obj-proxy: ^3.0.0
   jest: ^27.4.4
+  js-file-download: ^0.4.12
   next: 12.0.4
   postcss: ^8.4.5
   prettier: ^2.5.0
@@ -36,6 +37,7 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 5.15.4
   '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
   axios: 0.24.0
+  js-file-download: 0.4.12
   next: 12.0.4_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -4272,6 +4274,10 @@ packages:
       - ts-node
       - utf-8-validate
     dev: true
+
+  /js-file-download/0.4.12:
+    resolution: {integrity: sha512-rML+NkoD08p5Dllpjo0ffy4jRHeY6Zsapvr/W86N7E0yuzAO6qa5X9+xog6zQNlH102J7IXljNY2FtS6Lj3ucg==}
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}

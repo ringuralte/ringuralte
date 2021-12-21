@@ -8,6 +8,7 @@ import { Project } from "@/types/Project";
 import { server } from "../config";
 import { TitleBox } from "@/components/TitleBox";
 import { ComponentContainer } from "@/components/layout/Container";
+import { DownloadResume } from "@/components/DownloadResume";
 
 const Home: NextPage = ({
   projects,
@@ -32,9 +33,7 @@ const Home: NextPage = ({
             <Projects projects={projects} />
           </div>
         </div>
-			  <ComponentContainer>
-				  <TitleBox title="Resume" />
-			  </ComponentContainer>
+        <DownloadResume />
         <div className="flex-grow h-20" />
         <div className="flex flex-col bg-black items-center mx-auto w-full">
           <Footer />
