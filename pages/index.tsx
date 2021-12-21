@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { AboutMe } from "@/components/AboutMe";
 import { Header } from "@/components/Header";
@@ -41,7 +41,7 @@ const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   let projects: Project[] = [];
   try {
     const res = await fetch(`${server}/api/projects`, {
