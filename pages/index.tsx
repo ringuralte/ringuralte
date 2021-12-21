@@ -6,9 +6,8 @@ import { Projects } from "@/components/Projects";
 import { Footer } from "@/components/Footer";
 import { Project } from "@/types/Project";
 import { server } from "../config";
-import { TitleBox } from "@/components/TitleBox";
-import { ComponentContainer } from "@/components/layout/Container";
 import { DownloadResume } from "@/components/DownloadResume";
+import axios from "axios";
 
 const Home: NextPage = ({
   projects,
@@ -45,9 +44,14 @@ const Home: NextPage = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${server}/api/projects`);
-  const projects: Project[] = await res.json();
+export const getStaticProps: GetStaticProps = async (context) => {
+  const res = await axios.get(`${server}/api/projects`, {
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "User-Agent": "*",
+    },
+  });
+  const projects: Project[] = await res.data;
 
   return {
     props: { projects },
